@@ -2,7 +2,6 @@ package com.Tomek.math;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -46,15 +45,15 @@ public class SquarePolynomialGUI extends JFrame implements ActionListener
 		tC.setBounds(50, 100, 50, 30);
 		add(tC);
 
-		bRozwi¹¿ = new JButton("Solve equation");
-		bRozwi¹¿.setBounds(20, 160, 150, 30);
-		add(bRozwi¹¿);
-		bRozwi¹¿.addActionListener(this);
+		bRozwiÂ¹Â¿ = new JButton("Solve equation");
+		bRozwiÂ¹Â¿.setBounds(20, 160, 150, 30);
+		add(bRozwiÂ¹Â¿);
+		bRozwiÂ¹Â¿.addActionListener(this);
 
-		bWyjœcie = new JButton("Exit");
-		bWyjœcie.setBounds(180, 160, 150, 30);
-		add(bWyjœcie);
-		bWyjœcie.addActionListener(this);
+		bWyjÅ“cie = new JButton("Exit");
+		bWyjÅ“cie.setBounds(180, 160, 150, 30);
+		add(bWyjÅ“cie);
+		bWyjÅ“cie.addActionListener(this);
 
 		tWynik = new JTextField();
 		tWynik.setBounds(50, 220, 800, 40);
@@ -64,7 +63,7 @@ public class SquarePolynomialGUI extends JFrame implements ActionListener
 
 	public static void main(String[] args)
 	{
-		RównanieKwadratoweGUI app = new RównanieKwadratoweGUI();
+		SquarePolynomialGUI app = new SquarePolynomialGUI();
 		app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		app.setVisible(true);
 	}
@@ -79,8 +78,8 @@ public class SquarePolynomialGUI extends JFrame implements ActionListener
 			double b = Double.parseDouble(tB.getText());
 			double c = Double.parseDouble(tC.getText());
 			
-			RównaniaKwadratowe eqation = new RównaniaKwadratowe(a, b, c);
-			String solution = eqation.solve();
+			SquarePolynomial equation = new SquarePolynomial(a, b, c);
+			String solution = equation.solve();
 			tSolution.setText();
 			} 
 		else if (source == bExit)
